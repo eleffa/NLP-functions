@@ -3,6 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
+	python -m textblob.download_corpora --quiet
 	python -m pytest -vv test_*.py --cov=wikiphrases --cov=nlplogic test_corenlp.py
 
 format:
